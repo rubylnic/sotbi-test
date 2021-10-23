@@ -1,9 +1,9 @@
-function getUsers() {
-  let xhr = new XMLHttpRequest();
-  const url = 'https://jsonplaceholder.typicode.com/users';
-  xhr.open('GET', url);
-  xhr.send();
-  xhr.onload = function() {
+let xhr = new XMLHttpRequest();
+const url = 'https://jsonplaceholder.typicode.com/users';
+xhr.open('GET', url);
+xhr.send();
+xhr.onload = function() {
+  function getUsers() {
     let users = JSON.parse(xhr.response);
     let usersIds = [];
 
@@ -34,6 +34,7 @@ function getUsers() {
       }
     }
     deleteTwoRandomUsers();
+
     const allNames = getNames();
 
     function getNames() {
@@ -44,10 +45,11 @@ function getUsers() {
       });
       return names;
     }
-    console.log(allNames);
-  };
-  xhr.onerror = function() {
-    console.log('Error');
-  };
-}
-console.log(getUsers());
+
+    return allNames;
+  }
+  console.log(getUsers());
+};
+xhr.onerror = function() {
+  console.log('Error');
+};
