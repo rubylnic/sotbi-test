@@ -1,6 +1,6 @@
 function getUsers() {
   let xhr = new XMLHttpRequest();
-  const url = 'http://jsonplaceholder.typicode.com/users';
+  const url = 'https://jsonplaceholder.typicode.com/users';
   xhr.open('GET', url);
   xhr.send();
   xhr.onload = function() {
