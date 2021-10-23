@@ -1,0 +1,31 @@
+div {
+  width: 500px;
+  height: 500px;
+  margin: auto auto;
+  background: linear-gradient(95deg, #fcd135, #ffb303);
+  border-radius: 30px;
+  position: relative;
+  box-shadow: -2px 12px 11px rgb(0 0 0 / 50%);
+}
+
+div::before {
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(95deg, #edebe6, #ffffff);
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  border-bottom-left-radius: 30px;
+}
+
+div::after {
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(95deg, #171612, #000000);
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 0;
+  border-bottom-right-radius: 30px;
+}
